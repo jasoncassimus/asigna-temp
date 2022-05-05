@@ -44,7 +44,8 @@ class MudServer(object):
         """Constructs the MudServer object and starts listening for
         new players.
         """
-        interface = socket.gethostbyname(socket.gethostname())
+        hostname = socket.gethostname()
+        interface = socket.gethostbyname(hostname)
         self._clients = {}
         self._events = []
         self._new_events = []
